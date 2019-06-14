@@ -1,0 +1,128 @@
+<ion-content padding>
+<ion-header>
+  <!---ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar--->
+  <header>
+		<div class="top_bar">
+			<div class="container">
+				<ul>					
+					<li>
+						<a href="https://www.facebook.com/MYAGINGANDWELLNESS/?ref=hl" target="_blank"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://twitter.com/TSkrobanek" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#"><i class="fas fa-wifi"></i></a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		<div class="header-section">	
+			<div class="container">
+				<div class="row">
+					<div class="logo">
+						<a href="/home"><img src="../../assets/images/logo.png"></a>
+					</div>
+					<div class="lower_bar">
+						<nav class="navbar navbar-expand-lg navbar-light bg-light"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav mr-auto"><li class="nav-item active"><a class="nav-link" href="#">Blog</a></li><li class="nav-item"><a class="nav-link" href="/contact">CONTACT ME, ADVERTISE OR I’LL TRY YOUR PRODUCT</a></li></ul></div></nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</header>
+	
+</ion-header>
+<div class="inner-post" *ngIf="skeletion">
+<div class="container">
+  <ion-grid>
+  <ion-row>
+    <ion-col size="12">
+     <ion-skeleton-text animated style="height: 40px;width:30%;"></ion-skeleton-text>
+	 
+    </ion-col>
+    <ion-col  size="12" class="skeleton-img">
+     <ion-skeleton-text animated style="height: 200px;width:40%;"></ion-skeleton-text>
+	 
+    </ion-col>
+  
+  </ion-row>
+   <ion-row>
+    <ion-col  size="12">
+     <ion-skeleton-text animated style="height: 40px;"></ion-skeleton-text>
+    </ion-col>
+	 <ion-col  size="12">
+     <ion-skeleton-text animated style="height: 43px;"></ion-skeleton-text>
+    </ion-col>
+    <ion-col   size="12">
+     <ion-skeleton-text animated style="height: 43px;"></ion-skeleton-text>
+	 
+    </ion-col>
+    <ion-col  size="12">
+     <ion-skeleton-text animated style="height: 43px;"></ion-skeleton-text>
+	 
+    </ion-col>
+	
+  
+
+  </ion-row>
+ </ion-grid>
+ </div></div>
+<div class="inner-post" *ngIf="section_web">
+<div class="container" *ngIf="item">
+
+
+	<h1 [innerHTML]="item.title"></h1>
+	<img src="{{item.fimg_url}}" />		
+	<div [innerHTML]="item.cat_names_all" class="catagory"></div>
+	<div [innerHTML]="item.tag_names" class="tags"></div>
+	<ion-card-subtitle>{{ item.date | date:dateFormat }}</ion-card-subtitle>
+	<div [innerHTML]="item.content  | safe: 'html'" class="post-discription" id="discription"></div>
+	<div *ngIf="this.video" [innerHTML]="video  | safe: 'html'" class="post-discription" id="discriptions"></div>
+
+	
+	</div>
+</div>
+		  <div class="footer-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 footer1"><figure class="image"><img src="../../assets/images/logo.png" alt="MY AGING AND WELLNESS"></figure>
+			<p>So excited that you dropped by!  My Aging And Wellness is about aging well.  It’s not about fighting our age. It’s about breathing, staying in touch, letting go of the past, connecting and focusing on what’s important in life. And yeah, it’s okay to look as good as you feel while doing it!</p>
+			</div>
+			<div class="col-sm-3 footer1">
+			<h2>About Me</h2>
+			<p><a href="/about">I’m a writer, blogger and seriously passionate about aging well and looking the best while doing it!</a></p>
+			</div>
+			<div class="col-sm-3 footer1">
+			<h2>Menus</h2>
+			<ul><li><a class="navbar-item" href="/home">Blog</a></li><li><a class="navbar-item" href="/contact">Contact me, advertise or I’ll try your product</a></li></ul>
+			</div>
+			<div class="col-sm-2 footer1"> 
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">GDPR</button>
+			</div>
+		</div>
+	</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 left-menu">
+					<ul><li>Myaging and Wellness © 2019</li><li><a class="navbar-item" href="/privacy-policy">Privacy Policy</a></li><li><a class="navbar-item" href="/terms-and-conditions">Terms and Conditions</a></li></ul>
+					</div>
+				<div class="col-sm-4 right-menu">
+					<ul>
+					<li><a href="https://www.facebook.com/MYAGINGANDWELLNESS/?ref=hl" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://twitter.com/TSkrobanek" target="_blank"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="#"><i class="fas fa-wifi"></i></a></li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+</ion-content>

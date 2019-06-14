@@ -1,0 +1,7 @@
+{
+  "name": "wp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
